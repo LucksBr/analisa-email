@@ -6,3 +6,7 @@ class UserServiceInterface(ABC):
     @abstractmethod
     def find_by_email(self, email: str) -> User | None:
         pass
+
+    @abstractmethod
+    def authenticate(self, email: str, password: str) -> str:
+        pass
